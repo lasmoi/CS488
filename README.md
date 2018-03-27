@@ -5,7 +5,7 @@
   Then run './A4 <lua filepath>' to start rendering.
   This assignment was build successfully on lab computer gl28.
 
-##Objectives:
+## Objectives:
   Objective related images are stored in path 'Assets/objs/pics', and animated
   gif is in 'Assets/objs/animation'. The  corresponding lua file for each objective
   is located in 'Assets/objs'. 
