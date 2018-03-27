@@ -1,0 +1,12 @@
+body{
+	background-color: #99effc;
+	border: dashed;
+	border-width: 2px;
+	height: 100%;
+	margin: 0px;
+}
+
+#header{
+	font-size: 50;
+	font: bold;
+}
