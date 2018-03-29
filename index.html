@@ -1,17 +1,334 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<link rel="stylesheet" type="text/css" href="resources/css/lightbox.css">
+<!-- <script src="js/jquery-2.2.4.min.js"></script> -->
+<script>
 
+
+</script>
+<title>CS488 Final Project</title>
 </head>
 
 <body>
-<div id="header"> Hello </div>
+<div class="banner">
+  
+<div class="header" id = "class"> CS 488 Project </div>
+<div class="header" id = "project">
+Ray tracer <br></div>
+</div>
 
+<div class = "objectiveWrapper">
+
+<div class= "objectives">
+
+<div class = "objectiveName">1. Primitives</div>
+<div class = "objectiveDisc"> Support Cylinder and Cone as new primitive. </div>
+<div class = "imageContainer">
+  <span id="primitive 1">
+    <img src="project/pics/1 primitive 1.png" alt="primitive 1" width="256" height="256" onclick="openModal(1);currentSlide(1)">
+  </span>
+
+  <span id="primitive 2">
+    <img src="project/pics/1 primitive 2.png" alt="primitive 2" width="256" height="256" onclick="openModal(1);currentSlide(2)">
+  </span>
+
+<!-- Image template
+  <span id="">
+  <img src="project/pics/.png" width="256" height="256" onclick="openModal(3);currentSlide(1)"
+  alt="">
+  </span> 
+-->
+</div>
+
+</div> <!-- objectives -->
+
+
+<div class= "objectives">
+
+<div class = "objectiveName">2. CSG</div>
+<div class = "objectiveDisc"> CSG is used to construct complex shapes. Operation includes "union", "intersection", and "difference" </div>
+
+<div class = "imageContainer">
+  <span id="CSG 1">
+    <img src="project/pics/2 CSG u.png" width="256" height="256" onclick="openModal(2);currentSlide(1)" alt="Union operation">
+  </span>
+  <span id="CSG 2">
+    <img src="project/pics/2 CSG d.png" width="256" height="256" onclick="openModal(2);currentSlide(2)" alt="CSG d">
+  </span>
+  <span id="CSG 3">
+    <img src="project/pics/2 CSG i.png" width="256" height="256" onclick="openModal(2);currentSlide(3)" alt="Intersection operation">
+  </span>
+  <span id="CSG 4">
+    <img src="project/pics/2 CSG i 2.png" width="256" height="256" onclick="openModal(2);currentSlide(4)" alt="Intersection operation on another angle">
+  </span>
+</div>
+
+</div> <!-- objectives -->
+
+
+<div class= "objectives">
+
+<div class = "objectiveName">3. Reflection</div>
+<div class = "objectiveDisc"> Mirror reflection on surface. </div>
+
+<div class = "imageContainer">
+  <span id="Reflection 1">
+  <img src="project/pics/2 3csg and mirror.png" width="256" height="256" onclick="openModal(3);currentSlide(1)"
+  alt="showing another view of csg and some mirror reflection after csg">
+  </span>
+  <span id="Reflection 2">
+  <img src="project/pics/3 reflection.png" width="256" height="256" onclick="openModal(3);currentSlide(2)"
+  alt="multiple objects that is reflecting">
+  </span>
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives">
+
+<div class = "objectiveName">4. Refraction</div>
+<div class = "objectiveDisc"> The ray passing through a translucent/transparent should obey Snell's Law. </div>
+
+<div class = "imageContainer">
+  <span id="Refraction 1">
+  <img src="project/pics/4 refraction transparent.png" width="256" height="256" onclick="openModal(4);currentSlide(1)"
+  alt="a transparent blueish ball">
+  </span>
+  <span id="Refraction 2">
+  <img src="project/pics/4 refraction 1.png" width="256" height="256" onclick="openModal(4);currentSlide(2)"
+  alt="Refraction effect">
+  </span>
+  <span id="Refraction 3">
+  <img src="project/pics/4 refraction 2 glass 0.8.png" width="256" height="256" onclick="openModal(4);currentSlide(3)"
+  alt="refraction coefficient set to 1.5(same as glass) and transparency set to 0.8">
+  </span>
+  <span id="Refraction 4">
+  <img src="project/pics/4 refraction 2 glass 0.99.png" width="256" height="256" onclick="openModal(4);currentSlide(4)"
+  alt="transparent glass ball simulation">
+  </span>
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives">
+
+<div class = "objectiveName">5. Texture Mapping</div>
+<div class = "objectiveDisc"> Use texture mapping to make the scene looks better. </div>
+
+<div class = "imageContainer">
+  <span id="Texture">
+  <img src="project/pics/5 texture.png" width="256" height="256" onclick="openModal(5);currentSlide(1)"
+  alt="Texture Mapping">
+  </span> 
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives">
+
+<div class = "objectiveName">6. Bump Mapping</div>
+<div class = "objectiveDisc"> Apply bump mapping so that object looks more realistic. </div>
+
+<div class = "imageContainer">
+  <span id="bump 1">
+  <img src="project/pics/6 bump 1.png" width="256" height="256" onclick="openModal(6);currentSlide(1)"
+  alt="Bump mapping Angle 1">
+  </span>
+  <span id="bump 2">
+  <img src="project/pics/6 bump 2.png" width="256" height="256" onclick="openModal(6);currentSlide(2)"
+  alt="Bump mapping Angle 2">
+  </span>
+  <span id="bump 3">
+  <img src="project/pics/6 bump 3.png" width="256" height="256" onclick="openModal(6);currentSlide(3)"
+  alt="Bump mapping Angle 3">
+  </span>
+  <span id="bump 4">
+  <img src="project/pics/6 bump 4.png" width="256" height="256" onclick="openModal(6);currentSlide(4)"
+  alt="Bump mapping Angle 4">
+  </span>
+  <span id="bump 5">
+  <img src="project/pics/6 bump 5.png" width="256" height="256" onclick="openModal(6);currentSlide(5)"
+  alt="Bump mapping Angle 5">
+  </span>
+  <span id="bump 6">
+  <img src="project/pics/6 bump 6 white.png" width="256" height="256" onclick="openModal(6);currentSlide(6)"
+  alt="Texture is set to white to show Bump mapping">
+  </span>
+
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives">
+
+<div class = "objectiveName">7. Soft Shadow</div>
+<div class = "objectiveDisc"> Multiple shadow ray is casted to create a soft shadow. </div>
+
+<div class = "imageContainer">
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives">
+
+<div class = "objectiveName">8. Adaptive Anti-aliasing</div>
+<div class = "objectiveDisc"> The picture in low resolution will look better when applying Adaptive Anti-aliasing technique. </div>
+
+<div class = "imageContainer">
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives">
+
+<div class = "objectiveName">9. Motion Blur</div>
+<div class = "objectiveDisc"> Moving objects are blurred to reflect the moving speed. </div>
+
+<div class = "imageContainer">
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives">
+
+<div class = "objectiveName">10. Final Scene</div>
+<div class = "objectiveDisc"> A unique final scene to demonstrate the outcome of this project and the course. </div>
+
+<div class = "imageContainer">
+</div>
+
+</div> <!-- objectives -->
+
+
+</div>  <!-- objectiveWrapper -->
+
+
+<!-- display overlay -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <!-- <div class="objectiveOverlayWrapper">
+      <div class="mySlides">
+        <div class="numbertext">1 / 2</div>
+        <span class="Centerer"></span>
+        <img class="Centered" src="project/pics/1 primitive 1.png" alt="primitive 1">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 2</div>
+        <span class="Centerer"></span>
+        <img class="Centered" src="project/pics/1 primitive 2.png" alt="primitive 2">
+      </div>
+    </div>
+
+    <div class="objectiveOverlayWrapper">
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <span class="Centerer"></span>
+        <img class="Centered" src="project/pics/2 CSG u.png" alt="Union operation">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <span class="Centerer"></span>
+        <img class="Centered" src="project/pics/2 CSG d.png" alt="CSG d">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <span class="Centerer"></span>
+        <img class="Centered" src="project/pics/2 CSG i.png" alt="Intersection operation">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <span class="Centerer"></span>
+        <img class="Centered" src="project/pics/2 CSG i 2.png" alt="Intersection operation on another angle">
+      </div>
+    </div> -->
+
+    <div id="mySlidesTest">
+      <div class="numbertext" id="numberCount"></div>
+      <span class="Centerer"></span>
+      <img class="Centered" id="OverlayImage" src="project/pics/2 CSG i 2.png" alt="Intersection operation on another angle">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+  </div>
+
+  
+</div>
 
 
 
 </body>
 
 
+<script>
+function clicking(){
+  console.log("here");
+}
 
+var currentShow = 1;
+
+function openModal(i) {
+  currentShow = i;
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  // var containers = document.getElementsByClassName("imageContainer");
+  // var allslides = document.getElementsByClassName("mySlides");
+  // var slides = document.getElementsByClassName("objectiveOverlayWrapper")[currentShow-1].getElementsByClassName("mySlides");
+  // var imgs = document.getElementsByClassName("objectiveOverlayWrapper")[currentShow-1].getElementsByClassName("Centered");
+
+  
+  // if (n > slides.length) {slideIndex = 1}
+  // if (n < 1) {slideIndex = slides.length}
+  // for (i = 0; i < allslides.length; i++) {
+  //     allslides[i].style.display = "none";
+  // }  
+  // slides[slideIndex-1].style.display = "block";
+  // captionText.innerHTML = imgs[slideIndex-1].alt;
+
+  //test
+  var objectiveBlock = document.getElementsByClassName("objectives")[currentShow-1];
+
+  var imgs = objectiveBlock.getElementsByTagName("img");
+  var numOfImages = imgs.length;
+  if (n > numOfImages) {slideIndex = 1}
+  if (n < 1) {slideIndex = numOfImages}
+  var imageName = imgs[slideIndex-1].src;
+  var imageAlt = imgs[slideIndex-1].alt;
+  var numberField = document.getElementById("numberCount");
+  numberField.innerHTML = slideIndex + " / " + numOfImages;
+  var imageField = document.getElementById("OverlayImage");
+  imageField.src = imageName;
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = imgs[slideIndex-1].alt;
+
+}
+</script>
 </html>

@@ -1,12 +1,59 @@
-body{
-	background-color: #99effc;
-	border: dashed;
-	border-width: 2px;
-	height: 100%;
-	margin: 0px;
+html, body {
+  background-color: #fffbed;
+  padding: 0;
+  margin: 0;
 }
 
-#header{
-	font-size: 50;
-	font: bold;
+.banner{
+	background-color: #f0f0f0;
+	border: none;
+}
+
+.header{
+  text-align: center;
+  width: 100%;
+}
+
+#class {
+  font: 60px arial, sans-serif;
+  font-weight: bold;
+  padding-top: 90;
+}
+
+#project {
+  font: 30px arial, sans-serif;
+  padding-top: 10;
+  padding-bottom: 100;
+}
+
+#name {
+  font: italic 30px ;
+}
+
+.objectiveWrapper {
+  padding-top: 50px;
+}
+
+.objectives {
+  padding-left: 5%;
+  padding-bottom: 10%;
+}
+
+.objectiveName {
+  padding-top: 40px;
+  font: 30px arial, sans-serif;
+  font-weight: bold;
+}
+
+.objectiveDisc {
+  padding-top: 10px;
+}
+
+.imageContainer {
+  padding-top: 20px;
+}
+
+.imageContainer span{
+  padding-right: 20px;
+  line-height: 3;
 }
