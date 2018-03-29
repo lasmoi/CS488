@@ -117,7 +117,7 @@ Ray tracer <br></div>
 <div class = "objectiveDisc"> Use texture mapping to make the scene looks better. </div>
 
 <div class = "imageContainer">
-  <span id="Texture">
+  <span id="texture 1">
   <img src="project/pics/5 texture.png" width="256" height="256" onclick="openModal(5);currentSlide(1)"
   alt="Texture Mapping">
   </span> 
@@ -166,6 +166,22 @@ Ray tracer <br></div>
 <div class = "objectiveDisc"> Multiple shadow ray is casted to create a soft shadow. </div>
 
 <div class = "imageContainer">
+  <span id="soft 1">
+  <img src="project/pics/7 softshadow orig.png" width="256" height="256" onclick="openModal(7);currentSlide(1)"
+  alt="Original picture with no soft shadow">
+  </span> 
+  <span id="soft 2">
+  <img src="project/pics/7 softshadow 100s.png" width="256" height="256" onclick="openModal(7);currentSlide(2)"
+  alt="100 sampling soft shadows">
+  </span> 
+  <span id="soft 3">
+  <img src="project/pics/7 softshadow 50x3adaa.png" width="256" height="256" onclick="openModal(7);currentSlide(3)"
+  alt="3 level adaptive anti-aliasing with 50 sampling soft shadows.">
+  </span> 
+  <span id="soft 4">
+  <img src="project/pics/7 softshadow 1024pi.png" width="256" height="256" onclick="openModal(7);currentSlide(4)"
+  alt="1024*1024 soft shadow image">
+  </span> 
 </div>
 
 </div> <!-- objectives -->
@@ -176,6 +192,22 @@ Ray tracer <br></div>
 <div class = "objectiveDisc"> The picture in low resolution will look better when applying Adaptive Anti-aliasing technique. </div>
 
 <div class = "imageContainer">
+  <span id="adaa 1">
+  <img src="project/pics/8 adaa no aliasing.png" width="256" height="256" onclick="openModal(8);currentSlide(1)"
+  alt="No anti aliasing pic">
+  </span> 
+  <span id="adaa 2">
+  <img src="project/pics/8 adaa first level.png" width="256" height="256" onclick="openModal(8);currentSlide(2)"
+  alt="The border is showing the pixel that needs deeper iteration at first level">
+  </span> 
+  <span id="adaa 3">
+  <img src="project/pics/8 adaa second level.png" width="256" height="256" onclick="openModal(8);currentSlide(3)"
+  alt="the edge detected by second level anti-aliasing">
+  </span> 
+  <span id="adaa 4">
+  <img src="project/pics/8 adaa 3x.png" width="256" height="256" onclick="openModal(8);currentSlide(4)"
+  alt="Full anti-aliased image">
+  </span> 
 </div>
 
 </div> <!-- objectives -->
@@ -186,6 +218,10 @@ Ray tracer <br></div>
 <div class = "objectiveDisc"> Moving objects are blurred to reflect the moving speed. </div>
 
 <div class = "imageContainer">
+  <span id="blur 1">
+  <img src="project/pics/9 motion blur.png" width="256" height="256" onclick="openModal(9);currentSlide(1)"
+  alt="Blurred earth and box. Earth is rotating and box is dropping">
+  </span> 
 </div>
 
 </div> <!-- objectives -->
@@ -196,6 +232,38 @@ Ray tracer <br></div>
 <div class = "objectiveDisc"> A unique final scene to demonstrate the outcome of this project and the course. </div>
 
 <div class = "imageContainer">
+  <span id="final 1">
+  <img src="project/pics/10 finalscene static.png" width="256" height="256" onclick="openModal(10);currentSlide(1)"
+  alt="static final scene">
+  </span> 
+  <span id="final 2">
+  <img src="project/pics/10 finalscene blur.png" width="256" height="256" onclick="openModal(10);currentSlide(2)"
+  alt="final scene with motion blurred. Showing the train is moving forward.">
+  </span>
+</div>
+
+</div> <!-- objectives -->
+
+<div class= "objectives" id="extraObj">
+
+<div class = "objectiveName">11. Extra objective: Animation</div>
+<div class = "objectiveDisc"> Animation of couple scene </div>
+
+<div class = "imageContainer">
+  <span id="extra 1">
+  <img src="project/animation/longer animated motion blur scene.gif" width="512" height="512" onclick="openModal(11);currentSlide(1)"
+  alt="The motion blur scene with the box flying up">
+  </span> 
+  <br>
+  <span id="extra 2">
+  <img src="project/animation/earth.gif" width="512" height="512" onclick="openModal(11);currentSlide(2)"
+  alt="A spinning earth">
+  </span> 
+  <br>
+  <span id="extra 3">
+  <img src="project/animation/final scene.gif" width="512" height="512" onclick="openModal(11);currentSlide(3)"
+  alt="Final scene in animation">
+  </span> 
 </div>
 
 </div> <!-- objectives -->
